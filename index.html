@@ -4,102 +4,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>grid area define</title>
-        <style>
-            .header,
-            .nav,
-            .main,
-            .sidebar,
-            .advertise,
-            .footer{
-                border: 1px solid tomato;
-                background-color: bisque;
-            }
-            .header{
-                grid-area: header;
-            }
-            .nav{
-                grid-area: nav;
+    <title>grid layout</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 100px) 50px 50px;
+            gap: 20px;
+            max-width: 900px;
+            margin: 0px auto;
+            max-height: 400px;
 
-            }
-            .main{
-                grid-area: main;
-            }
-            .sidebar{
-                grid-area: sidebar;
-            }
-            .advertise{
-                grid-area: advertise;
-            }
-            .footer{
-                grid-area: footer;
-            }
-            .container{
-                display: grid;
-                gap: 20px;
-                grid-template-areas: 
-                "header header header header"
-                "nav main main sidebar"
-                "nav main main sidebar"
-                "footer footer footer footer"
-                ;
+        }
 
-            }
-            @media screen and (max-width:576px) {
-                .container{
-                    grid-template-areas: 
-                    "header"
-                    "nav"
-                    "sidebar"
-                    "advertise"
-                    "main"
-                    "footer"
+        .box {
+            background-color: rgba(78, 16, 16, 0.349);
+            border-color: antiquewhite;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-                    ;
-                }
-            }
-        </style>
+        #box-1 {
+            grid-row: span 5;
+        }
+
+        #box-11,
+        #box-12 {
+            grid-column: span 3;
+        }
+        .header{
+            display: flex;
+            max-width: 900px;
+            margin: 50px auto 0px;
+            justify-content: center;
+            
+
+        }
+
+        .header-text{
+            font-size: 60px;
+            text-align: center;
+        }
+    </style>
 </head>
 
-<body class="container">
-    <div class="header">
-        <h1>header</h1>
+<body>
+    <header class="header">
+        <h1 class="header-text">Grid layout</h1>
+    </header>
+    <div class="container">
+        <div class="box" id="box-1">
+            <h1>box-1</h1>
+        </div>
+        <div class="box" id="box-2">
+            <h1>box-2</h1>
+        </div>
+        <div class="box" id="box-3">
+            <h1>box-3</h1>
+        </div>
+        <div class="box" id="box-4">
+            <h1>box-4</h1>
+        </div>
+        <div class="box" id="box-5">
+            <h1>box-5</h1>
+        </div>
+        <div class="box" id="box-6">
+            <h1>box-6</h1>
+        </div>
+        <div class="box" id="box-7">
+            <h1>box-7</h1>
+        </div>
+        <div class="box" id="box-8">
+            <h1>box-8</h1>
+        </div>
+        <div class="box" id="box-9">
+            <h1>box-9</h1>
+        </div>
+        <div class="box" id="box-10">
+            <h1>box-10</h1>
+        </div>
+        <div class="box" id="box-11">
+            <h1>box-11</h1>
+        </div>
+        <div class="box" id="box-12">
+            <h1>box-12</h1>
+        </div>
     </div>
-    <nav class="nav">
-        <ul>
-            <li>nav-1</li>
-            <li>nav-2</li>
-            <li>nav-3</li>
-
-        </ul>
-    </nav>
-    <main class="main">
-        <artical>
-            <h4>Artical-1</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti esse omnis pariatur nihil accusantium
-                reprehenderit voluptatum error facilis ipsa repudiandae. Pariatur asperiores eos cupiditate consectetur
-                distinctio magni cum quos obcaecati.</p>
-        </artical>
-        <artical>
-            <h4>Artical-2</h4>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, deserunt odio eius aliquid unde id
-                praesentium amet quo voluptatibus. Beatae dolorem labore distinctio vel neque atque non tempora sit
-                minima.</p>
-        </artical>
-    </main>
-    <aside>
-        <div class="sidebar">
-            <h5>sidebar</h5>
-        </div>
-        <div class="advertise">
-            <h5>advertise</h5>
-        </div>
-    </aside>
-    <footer class="footer">
-        <h5>
-            footer</h5>
-    </footer>
-
 
 </body>
 
